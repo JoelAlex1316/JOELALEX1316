@@ -1,0 +1,359 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+html{
+    scroll-behavior: smooth;
+}
+
+/*.............................loader................................*/
+
+.loader {
+    --path: #2f3545;
+    --dot: #5628ee;
+    --duration: 3s;
+    width: 44px;
+    height: 44px;
+   
+    position: relative;
+   
+  }
+  
+  .loader:before {
+    content: '';
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    position: absolute;
+    display: block;
+    background: var(--dot);
+    top: 37px;
+    left: 19px;
+    transform: translate(-18px, -18px);
+    animation: dotRect var(--duration) cubic-bezier(0.785, 0.135, 0.15, 0.86) infinite;
+  }
+  
+  .loader svg {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .loader svg rect, .loader svg polygon, .loader svg circle {
+    fill: none;
+    stroke: var(--path);
+    stroke-width: 10px;
+    stroke-linejoin: round;
+    stroke-linecap: round;
+  }
+  
+  .loader svg polygon {
+    stroke-dasharray: 145 76 145 76;
+    stroke-dashoffset: 0;
+    animation: pathTriangle var(--duration) cubic-bezier(0.785, 0.135, 0.15, 0.86) infinite;
+  }
+  
+  .loader svg rect {
+    stroke-dasharray: 192 64 192 64;
+    stroke-dashoffset: 0;
+    animation: pathRect 3s cubic-bezier(0.785, 0.135, 0.15, 0.86) infinite;
+  }
+  
+  .loader svg circle {
+    stroke-dasharray: 150 50 150 50;
+    stroke-dashoffset: 75;
+    animation: pathCircle var(--duration) cubic-bezier(0.785, 0.135, 0.15, 0.86) infinite;
+  }
+  
+  .loader.triangle {
+    width: 48px;
+  }
+  
+  .loader.triangle:before {
+    left: 21px;
+    transform: translate(-10px, -18px);
+    animation: dotTriangle var(--duration) cubic-bezier(0.785, 0.135, 0.15, 0.86) infinite;
+  }
+  
+  @keyframes pathTriangle {
+    33% {
+      stroke-dashoffset: 74;
+    }
+  
+    66% {
+      stroke-dashoffset: 147;
+    }
+  
+    100% {
+      stroke-dashoffset: 221;
+    }
+  }
+  
+  @keyframes dotTriangle {
+    33% {
+      transform: translate(0, 0);
+    }
+  
+    66% {
+      transform: translate(10px, -18px);
+    }
+  
+    100% {
+      transform: translate(-10px, -18px);
+    }
+  }
+  
+  @keyframes pathRect {
+    25% {
+      stroke-dashoffset: 64;
+    }
+  
+    50% {
+      stroke-dashoffset: 128;
+    }
+  
+    75% {
+      stroke-dashoffset: 192;
+    }
+  
+    100% {
+      stroke-dashoffset: 256;
+    }
+  }
+  
+  @keyframes dotRect {
+    25% {
+      transform: translate(0, 0);
+    }
+  
+    50% {
+      transform: translate(18px, -18px);
+    }
+  
+    75% {
+      transform: translate(0, -36px);
+    }
+  
+    100% {
+      transform: translate(-18px, -18px);
+    }
+  }
+  
+  @keyframes pathCircle {
+    25% {
+      stroke-dashoffset: 125;
+    }
+  
+    50% {
+      stroke-dashoffset: 175;
+    }
+  
+    75% {
+      stroke-dashoffset: 225;
+    }
+  
+    100% {
+      stroke-dashoffset: 275;
+    }
+  }
+  
+  .loader {
+    display: inline-block;
+    margin: 0 16px;
+  }
+  
+   
+/*.............................end loader................................*/
+
+
+
+
+section{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    
+}
+
+.container{    
+    height: 100vh;
+}
+
+section{
+    background: #10131E;
+}
+
+.description{
+    padding: 20px;
+    width: 50%;
+    height: 500px;
+   text-align: center;
+   color: #2d9687;
+   
+    
+}
+
+.description .vert p a{
+    text-decoration: none;
+}
+.typ{
+    display: inline-block;
+}
+.typ h1{
+    font-family: 'Source Code Pro', monospace;
+    font-size: 35px;
+    border-right: solid;
+    white-space: nowrap;
+    overflow: hidden;
+    animation: 
+        typing 2s steps(20), 
+        cursor .4s step-end infinite alternate;
+    }
+
+.typ h1 span{
+        font-family: 'Permanent Marker', cursive;
+        color: white;
+        
+    }
+
+.description p{
+        font-family: 'Source Code Pro', monospace;
+        font-size: 30px;
+        color: #e9b171; 
+        opacity: 0;
+        animation: ani2 0.7s ease-out 2s forwards;
+    }
+    .vert{
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
+        
+    }
+
+    
+    @keyframes ani2 {
+        100%{
+            opacity: 1;
+        }
+        
+    }
+
+.imgg{
+    width: 50%;
+    height: 500px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+ }
+ 
+ .imgg img{
+     width: 20em;
+ }
+  
+
+ .ani{
+    display: inline-block;
+}
+
+.text{
+    font-size: 5em;
+    letter-spacing: 10px;
+    font-family: monospace;
+    border-right: solid;
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    animation: 
+        typing 2s steps(19), 
+        cursor .4s step-end infinite alternate;
+}
+
+@keyframes cursor{
+    50% {border-color: transparent;}
+}
+
+@keyframes typing{
+    from{width: 0;}
+}
+
+/*.............................setion two................................*/
+
+.cards {
+    position: relative;
+  }
+  
+  .card {
+    z-index: 1;
+    position: absolute;
+    width: 254px;
+    height: 190px;
+    border-radius: 10px;
+    transition: all .5s ease-out;
+    overflow: hidden;
+    transform: translateX(0px) translateY(0px) perspective(905px) rotateX(0deg) rotateY(0deg) rotateZ(-8deg);
+  }
+  
+  .card.one {
+    top: -120px;
+    left: -150px;
+    background: linear-gradient(180deg, #FF0055 0%, #000066 100%);
+  }
+  
+  .card.two {
+    top: -90px;
+    left: -120px;
+    background: linear-gradient(180deg, #fa00ff 0%, #01f998 99%);
+  }
+  
+  .card.three {
+    top: -60px;
+    left: -90px;
+    background: linear-gradient(180deg, #c0f901 0%, #fa00ff 100%);
+  }
+
+  .card.four {
+    top: -30px;
+    left: -60px;
+    background: linear-gradient(180deg, #fa00ff 0%, #01f998 99%);
+  }
+  
+  .card:hover {
+    z-index: 4;
+    transform: perspective(1000px) rotateX(0deg) rotateY(0deg) rotateZ(0deg) !important;
+    transition: all .5s ease-out;
+  }
+  
+  .cardDetails {
+    width: 55%;
+    height: 100%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+    background: rgba(0,0,0,0.8);
+    transition: .5s;
+    transform-origin: left;
+    transform: perspective(2000px) rotateY(-90deg);
+  }
+  
+  .card:hover .cardDetails {
+    transform: perspective(2000px) rotateY(0deg);
+  }
+  
+  .cardDetailsHaeder {
+    font-weight: 600;
+    color: #edb899;
+  }
+  
+  .cardDetailsButton {
+    padding: 3px 6px;
+    border-radius: 25px;
+    background-color: #edb899;
+    color: #000;
+    font-weight: 600;
+  }
