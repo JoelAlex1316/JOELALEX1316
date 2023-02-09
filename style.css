@@ -289,8 +289,8 @@ section{
   .card {
     z-index: 1;
     position: absolute;
-    width: 254px;
-    height: 190px;
+    width: 260px;
+    height: 210px;
     border-radius: 10px;
     transition: all .5s ease-out;
     overflow: hidden;
@@ -304,20 +304,20 @@ section{
   }
   
   .card.two {
-    top: -90px;
-    left: -120px;
+    top: -80px;
+    left: -110px;
     background: linear-gradient(180deg, #fa00ff 0%, #01f998 99%);
   }
   
   .card.three {
-    top: -60px;
-    left: -90px;
+    top: -40px;
+    left: -80px;
     background: linear-gradient(180deg, #c0f901 0%, #fa00ff 100%);
   }
 
   .card.four {
-    top: -30px;
-    left: -60px;
+    top: -50px;
+    left: -40px;
     background: linear-gradient(180deg, #fa00ff 0%, #01f998 99%);
   }
   
