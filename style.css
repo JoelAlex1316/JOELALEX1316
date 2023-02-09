@@ -223,7 +223,7 @@ section{
         font-size: 30px;
         color: #e9b171; 
         opacity: 0;
-        animation: ani2 0.7s ease-out 2s forwards;
+        animation: ani2 0.7s ease-out 3s forwards;
     }
     .vert{
         position: relative;
